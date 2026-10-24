@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bangladesh All-in-One Services | বাংলাদেশ অল-ইন-ওয়ান সার্ভিসেস</title>
+<meta name="description" content="Unofficial directory of public service helplines and information for Bangladesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ===== 1. THEME (edit colours here) ===== */
+:root{--green:#006a4e;--green-d:#004d38;--red:#f42a41;--bg:#f6faf7;--card:#fff;--text:#14211b;--muted:#53625a;--line:#d9e5de;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans Bengali",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--green-d)}
+:focus-visible{outline:3px solid #ffb703;outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+section{padding:28px 0}
+h2{font-size:1.4rem;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 16px}
+.btn{display:inline-block;border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;min-height:44px}
+.btn-red{background:var(--red);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-out{background:#fff;color:var(--green-d);border:2px solid var(--green)}
+/* ===== 2. HEADER ===== */
+header{background:var(--green);color:#fff;position:sticky;top:0;z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;max-width:1080px;margin:0 auto}
+.logo{font-weight:800;display:flex;align-items:center;gap:8px;font-size:1.05rem}
+.dot{width:26px;height:26px;border-radius:50%;background:var(--red);border:3px solid #fff;flex:none}
+nav{display:flex;gap:4px;overflow-x:auto}
+nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;white-space:nowrap;font-size:.92rem}
+nav a:hover{background:var(--green-d)}
+#langBtn{background:#fff;color:var(--green-d);flex:none}
+@media(max-width:700px){.bar{flex-wrap:wrap}nav{order:3;width:100%}}
+/* ===== 3. HERO ===== */
+.hero{background:linear-gradient(160deg,var(--green) 0%,var(--green-d) 100%);color:#fff;padding:36px 0 44px}
+.hero h1{font-size:clamp(1.6rem,5vw,2.4rem);margin:0 0 8px;line-height:1.3}
+.hero p{margin:0 0 18px;max-width:600px;opacity:.95}
+.search{display:flex;gap:8px;max-width:640px}
+.search input{flex:1;min-width:0;padding:12px 14px;border-radius:10px;border:0;font:inherit;min-height:48px}
+.unofficial{margin-top:14px;font-size:.85rem;background:rgba(255,255,255,.14);display:inline-block;padding:6px 10px;border-radius:8px}
+/* ===== 4. EMERGENCY ===== */
+.emerg{background:#fff3f4;border-top:4px solid var(--red)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.card h3{margin:0 0 4px;font-size:1.05rem}
+.card p{margin:0 0 10px;color:var(--muted);font-size:.93rem}
+.num{font-size:1.8rem;font-weight:800;color:var(--red);line-height:1.1}
+.card .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row a.small{font-size:.88rem}
+/* ===== 5. CATEGORIES ===== */
+.cats{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.cat{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:14px 8px;text-align:center;cursor:pointer;font:inherit;color:var(--text)}
+.cat:hover,.cat.on{border-color:var(--green);background:#e8f5ee}
+.cat .ic{font-size:1.9rem;display:block}
+/* ===== 6. FILTERS ===== */
+.filters{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:14px}
+select{padding:10px;border-radius:10px;border:1px solid var(--line);font:inherit;min-height:44px;background:#fff;width:100%}
+.note{background:#fff8e1;border-left:4px solid #ffb703;padding:10px 12px;border-radius:8px;margin:10px 0;font-size:.92rem}
+.badge{display:inline-block;background:#ffe3e6;color:#a1001a;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:99px}
+.badge.ok{background:#dff3e8;color:var(--green-d)}
+/* ===== 7. TABS (agri / business) ===== */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tab{padding:9px 14px;border-radius:99px;border:2px solid var(--green);background:#fff;color:var(--green-d);font:inherit;font-weight:600;cursor:pointer}
+.tab.on{background:var(--green);color:#fff}
+.panel{display:none}.panel.on{display:block}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:.92rem}
+th{background:#e8f5ee}
+.scroll{overflow-x:auto}
+/* ===== 8. CONTACT + FOOTER ===== */
+textarea,input[type=text]{width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);font:inherit;margin-bottom:10px}
+footer{background:#10231b;color:#cfe0d6;padding:24px 0;font-size:.9rem}
+footer a{color:#fff}
+.empty{text-align:center;color:var(--muted);padding:18px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="logo"><span class="dot" aria-hidden="true"></span><span data-i="brand"></span></div>
+    <nav aria-label="Main">
+      <a href="#emergency" data-i="nEm"></a>
+      <a href="#services" data-i="nSv"></a>
+      <a href="#agri" data-i="nAg"></a>
+      <a href="#safety" data-i="nSf"></a>
+      <a href="#contact" data-i="nCt"></a>
+    </nav>
+    <button id="langBtn" class="btn" aria-label="Change language"></button>
+  </div>
+</header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1 data-i="h1"></h1>
+  <p data-i="h1p"></p>
+  <form class="search" id="heroSearch" role="search">
+    <input id="q" type="search" data-ph="ph" aria-label="Search">
+    <button class="btn btn-red" type="submit" data-i="go"></button>
+  </form>
+  <span class="unofficial" data-i="unoff"></span>
+</div></div>
+
+<section id="emergency" class="emerg"><div class="wrap">
+  <h2 data-i="emT"></h2>
+  <p class="sub" data-i="emS"></p>
+  <div class="grid" id="emGrid"></div>
+  <div class="note" data-i="emN"></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 data-i="catT"></h2>
+  <div class="cats" id="cats"></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <h2 data-i="svT"></h2>
+  <p class="sub" data-i="svS"></p>
+  <div class="filters">
+    <select id="fDiv" aria-label="Division"></select>
+    <select id="fDis" aria-label="District"></select>
+    <select id="fUp" aria-label="Upazila"></select>
+    <select id="fCat" aria-label="Category"></select>
+  </div>
+  <div id="locNote" class="note"></div>
+  <div class="grid" id="results"></div>
+</div></section>
+
+<section id="agri"><div class="wrap">
+  <h2 data-i="agT"></h2>
+  <p class="sub" data-i="agS"></p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="panel" id="p-farm"></div>
+  <div class="panel" id="p-adv"></div>
+  <div class="panel" id="p-mkt"></div>
+  <div class="panel" id="p-biz"></div>
+  <div class="panel" id="p-sell"></div>
+</div></section>
+
+<section id="safety"><div class="wrap">
+  <h2 data-i="sfT"></h2>
+  <ul id="safeList"></ul>
+  <h2 style="margin-top:20px" data-i="bkT"></h2>
+  <div class="grid" id="backend"></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2 data-i="ctT"></h2>
+  <p class="sub" data-i="ctS"></p>
+  <div class="card" style="max-width:520px">
+    <textarea id="msg" rows="4" data-ph="ctPh" aria-label="Message"></textarea>
+    <button class="btn btn-green" id="sendBtn" data-i="ctBtn"></button>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p data-i="foot1"></p>
+  <p><a href="https://bangladesh.gov.bd" target="_blank" rel="noopener">National Portal of Bangladesh</a> ·
+     <a href="https://www.national999.gov.bd" target="_blank" rel="noopener">National 999</a> ·
+     <a href="https://fireservice.gov.bd" target="_blank" rel="noopener">Fire Service</a></p>
+</div></footer>
+
+<script>
+/* ===== A. TEXT (Bengali + English). Add new text here. ===== */
+const T={
+bn:{brand:"বাংলাদেশ অল-ইন-ওয়ান সার্ভিসেস",nEm:"জরুরি",nSv:"সেবা",nAg:"কৃষি ও ব্যবসা",nSf:"নিরাপত্তা",nCt:"যোগাযোগ",
+h1:"এক জায়গায় বাংলাদেশের জনসেবার তথ্য",h1p:"জরুরি নম্বর, স্বাস্থ্য, কৃষি, শিক্ষা, আইনি সহায়তা ও আরও অনেক সেবার সরকারি উৎসের লিংক খুঁজুন।",
+ph:"সেবা খুঁজুন: যেমন অ্যাম্বুলেন্স, কৃষি, আইন...",go:"খুঁজুন",
+unoff:"এটি সরকারি ওয়েবসাইট নয়। একটি অনানুষ্ঠানিক প্রোটোটাইপ।",
+emT:"জরুরি সেবা",emS:"বিপদে সরাসরি কল করুন। নিচের বাটনে চাপ দিলে ফোনে কল ডায়াল হবে।",
+emN:"নম্বর ও সেবা পরিবর্তন হতে পারে। ব্যবহারের আগে অফিসিয়াল লিংকে যাচাই করুন।",
+call:"কল করুন",src:"অফিসিয়াল সূত্র",
+catT:"সেবার ধরন",svT:"সেবা খুঁজুন",svS:"বিভাগ, জেলা ও উপজেলা অনুযায়ী ফিল্টার করুন।",
+allDiv:"সব বিভাগ",allDis:"সব জেলা",allUp:"সব উপজেলা",allCat:"সব ধরন",
+locNone:"নির্বাচিত এলাকার জন্য যাচাইকৃত স্থানীয় তালিকা এখনও নেই। স্থানীয় তালিকার জন্য ব্যাকএন্ড ও যাচাইকৃত প্রদানকারী প্রয়োজন। নিচে জাতীয় হেল্পলাইন দেখানো হলো।",
+locAll:"নিচে জাতীয় পর্যায়ের হেল্পলাইন দেখানো হচ্ছে।",
+noRes:"কোনো ফলাফল পাওয়া যায়নি।",
+agT:"কৃষক, কৃষি ও ব্যবসা",agS:"নিচের সব তথ্য নমুনা (SAMPLE)। এগুলো সত্যিকারের দাম বা যাচাইকৃত তালিকা নয়।",
+sample:"নমুনা",
+tFarm:"কৃষক",tAdv:"কৃষি পরামর্শ",tMkt:"বাজার তথ্য",tBiz:"স্থানীয় ব্যবসা",tSell:"কেনাবেচা",
+farmP:"কৃষি তথ্য সার্ভিস (DAE) এর কৃষি কল সেন্টার ও সরকারি কৃষি তথ্যের লিংক সেবা তালিকায় আছে। ফসলের রোগ, বীজ ও সার সংক্রান্ত পরামর্শের জন্য স্থানীয় উপসহকারী কৃষি কর্মকর্তার সাথে যোগাযোগ করুন।",
+advH:"নমুনা পরামর্শ বিষয়",advL:["ফসলের রোগ চিনুন (ছবি আপলোড ফিচার ভবিষ্যতে)","বীজ বাছাইয়ের সাধারণ নিয়ম","সারের সুষম ব্যবহার"],
+mktNote:"এই টেবিলে কোনো সত্যিকারের দাম নেই। লাইভ দামের জন্য সরকারি বাজার তথ্য API বা ডাটাবেস লাগবে।",
+mktH:["পণ্য","দাম","তারিখ"],mktR:["ধান (নমুনা)","আলু (নমুনা)","পেঁয়াজ (নমুনা)"],mktV:"দাম নেই",mktD:"লাইভ নয়",
+bizP:"স্থানীয় দোকান ও ব্যবসার তালিকা দেখাতে ডাটাবেস ও যাচাই ব্যবস্থা দরকার। নিচে শুধু নমুনা কার্ড:",
+bizCards:["নমুনা দোকান ক","নমুনা দোকান খ"],bizT:"ঠিকানা ও ফোন নেই (নমুনা)",
+sellP:"কেনাবেচার পোস্ট, ছবি আপলোড, ব্যবহারকারী লগইন ও মডারেশন লাগবে, যা এখনও চালু নয়।",
+sfT:"নিরাপত্তা নোটিশ",
+safe:["এটি সরকারি ওয়েবসাইট নয়। কোনো সরকারি সংস্থার সাথে যুক্ত নয়।","জীবন বিপন্ন হলে প্রথমে ৯৯৯ এ কল করুন।","ফোনে OTP, পিন বা পাসওয়ার্ড কাউকে দেবেন না।","এই সাইট কোনো ব্যক্তিগত তথ্য সংগ্রহ বা সংরক্ষণ করে না।","নম্বর ও লিংক ব্যবহারের আগে অফিসিয়াল সাইটে যাচাই করুন।"],
+bkT:"যেসব ফিচার এখনও চালু নয়",
+bk:[["স্থানীয় সেবা তালিকা","ডাটাবেস + যাচাইকৃত প্রদানকারী"],["লাইভ বাজারদর","সরকারি API/ডেটা সংযোগ"],["রক্তদাতা খোঁজা","ডাটাবেস, লগইন, গোপনীয়তা সুরক্ষা"],["কেনাবেচা পোস্ট","লগইন, ডাটাবেস, মডারেশন"],["চাকরি ও প্রশিক্ষণ তালিকা","নিয়োগকর্তা যাচাই + ব্যাকএন্ড"]],
+needs:"প্রয়োজন:",
+ctT:"যোগাযোগ",ctS:"মতামত বা ভুল তথ্যের খবর দিন। বাটনে চাপলে আপনার ইমেইল অ্যাপ খুলবে। জরুরি প্রয়োজনে এটি ব্যবহার করবেন না।",
+ctPh:"আপনার বার্তা...",ctBtn:"ইমেইল অ্যাপে খুলুন",
+foot1:"© বাংলাদেশ অল-ইন-ওয়ান সার্ভিসেস। অনানুষ্ঠানিক প্রোটোটাইপ, সরকারি সাইট নয়।",
+cat:{emergency:"পুলিশ ও জরুরি",health:"স্বাস্থ্য",fire:"ফায়ার ও দুর্যোগ",agri:"কৃষি",business:"ব্যবসা",edu:"চাকরি ও শিক্ষা",gov:"সরকারি ও আইন",transport:"পরিবহন ও ইউটিলিটি",women:"নারী ও শিশু",other:"অন্যান্য"}},
+en:{brand:"Bangladesh All-in-One Services",nEm:"Emergency",nSv:"Services",nAg:"Agri & Business",nSf:"Safety",nCt:"Contact",
+h1:"Public service information for Bangladesh, in one place",h1p:"Find emergency numbers, health, agriculture, education, legal aid and more, with links to official sources.",
+ph:"Search: ambulance, farming, legal...",go:"Search",
+unoff:"This is NOT a government website. It is an unofficial prototype.",
+emT:"Emergency services",emS:"Call directly in an emergency. Tap a button to open your phone dialer.",
+emN:"Numbers and services can change. Verify using the official links before relying on them.",
+call:"Call",src:"Official source",
+catT:"Service categories",svT:"Find services",svS:"Filter by division, district and upazila.",
+allDiv:"All divisions",allDis:"All districts",allUp:"All upazilas",allCat:"All categories",
+locNone:"No verified local listings exist yet for the selected area. Local listings need a backend and verified providers. National helplines are shown below.",
+locAll:"National helplines are shown below.",
+noRes:"No results found.",
+agT:"Farmers, agriculture & business",agS:"Everything below is SAMPLE data. These are not real prices or verified listings.",
+sample:"SAMPLE",
+tFarm:"For farmers",tAdv:"Farming advice",tMkt:"Market info",tBiz:"Local business",tSell:"Buy & sell",
+farmP:"The DAE agriculture call centre and official agriculture links are in the services list. For crop disease, seed and fertilizer advice, contact your local sub-assistant agriculture officer.",
+advH:"Sample advice topics",advL:["Recognising crop diseases (photo upload is a future feature)","General seed selection rules","Balanced fertilizer use"],
+mktNote:"This table has no real prices. Live prices need an official market-data API or database.",
+mktH:["Product","Price","Date"],mktR:["Rice (sample)","Potato (sample)","Onion (sample)"],mktV:"No price",mktD:"Not live",
+bizP:"Showing local shops and businesses needs a database and a verification process. Sample cards only:",
+bizCards:["Sample Shop A","Sample Shop B"],bizT:"No address or phone (sample)",
+sellP:"Buy/sell posts, photo upload, user login and moderation are required and are not live yet.",
+sfT:"Safety notices",
+safe:["This is not a government website and is not affiliated with any agency.","If life is in danger, call 999 first.","Never share OTPs, PINs or passwords over the phone.","This site does not collect or store personal information.","Verify numbers and links on official sites before use."],
+bkT:"Features not live yet",
+bk:[["Local service listings","Database + verified providers"],["Live market prices","Official API / data feed"],["Blood donor search","Database, login, privacy protection"],["Buy & sell posts","Login, database, moderation"],["Jobs & training listings","Employer verification + backend"]],
+needs:"Needs:",
+ctT:"Contact",ctS:"Send feedback or report wrong information. The button opens your email app. Do not use this for emergencies.",
+ctPh:"Your message...",ctBtn:"Open in email app",
+foot1:"© Bangladesh All-in-One Services. Unofficial prototype, not a government site.",
+cat:{emergency:"Police & Emergency",health:"Health",fire:"Fire & Disaster",agri:"Agriculture",business:"Business",edu:"Jobs & Education",gov:"Government & Legal",transport:"Transport & Utilities",women:"Women & Children",other:"Other"}}};
+
+const CAT_ICONS={emergency:"🚓",health:"🏥",fire:"🚒",agri:"🌾",business:"🛒",edu:"🎓",gov:"🏛️",transport:"🚌",women:"👩‍👧",other:"➕"};
+
+/* ===== B. NATIONAL SERVICES (only well-known helplines; re-verify before launch) ===== */
+const SERVICES=[
+{cat:"emergency",tel:"999",url:"https://www.national999.gov.bd",bn:["জাতীয় জরুরি সেবা ৯৯৯","পুলিশ, ফায়ার সার্ভিস ও অ্যাম্বুলেন্সের জন্য জাতীয় জরুরি নম্বর।"],en:["National Emergency 999","National emergency number for police, fire service and ambulance."]},
+{cat:"fire",tel:"102",url:"https://fireservice.gov.bd",bn:["ফায়ার সার্ভিস ১০২","অগ্নিকাণ্ড, উদ্ধার ও দুর্ঘটনায় ফায়ার সার্ভিস ও সিভিল ডিফেন্স হটলাইন।"],en:["Fire Service 102","Fire Service & Civil Defence hotline for fires, rescue and accidents."]},
+{cat:"gov",tel:"333",url:"https://bangladesh.gov.bd",bn:["সরকারি তথ্য সেবা ৩৩৩","সরকারি সেবা সম্পর্কে তথ্য ও পরামর্শ পাওয়ার কল সেন্টার।"],en:["Government Information 333","Call centre for information and guidance on government services."]},
+{cat:"health",tel:"16263",url:"https://dghs.gov.bd",bn:["স্বাস্থ্য বাতায়ন ১৬২৬৩","স্বাস্থ্য অধিদপ্তরের স্বাস্থ্য পরামর্শ হেল্পলাইন।"],en:["Health helpline 16263","DGHS health advice helpline."]},
+{cat:"women",tel:"109",url:"https://dwa.gov.bd",bn:["নারী ও শিশু নির্যাতন প্রতিরোধ ১০৯","নারী ও শিশুর প্রতি সহিংসতায় সহায়তা হেল্পলাইন।"],en:["Violence against women & children 109","Helpline for violence against women and children."]},
+{cat:"women",tel:"1098",url:"https://dss.gov.bd",bn:["চাইল্ড হেল্পলাইন ১০৯৮","বিপদগ্রস্ত শিশুদের জন্য হেল্পলাইন।"],en:["Child Helpline 1098","Helpline for children in need."]},
+{cat:"agri",tel:"16123",url:"https://dae.gov.bd",bn:["কৃষি কল সেন্টার ১৬১২৩","কৃষি তথ্য ও পরামর্শ সেবা।"],en:["Krishi Call Centre 16123","Agricultural information and advice."]},
+{cat:"gov",tel:"16430",url:"https://nlaso.gov.bd",bn:["জাতীয় আইনগত সহায়তা ১৬৪৩০","বিনামূল্যে আইনি সহায়তা পেতে হটলাইন।"],en:["National Legal Aid 16430","Hotline for free legal aid."]},
+{cat:"gov",tel:"106",url:"https://acc.gov.bd",bn:["দুর্নীতি দমন কমিশন ১০৬","দুর্নীতি সংক্রান্ত অভিযোগ জানানোর হটলাইন।"],en:["Anti-Corruption Commission 106","Hotline to report corruption."]}
+];
+
+/* ===== C. LOCATIONS (64 districts). Upazila lists are filled only where verified. ===== */
+const DIV={
+Dhaka:{bn:"ঢাকা",d:["Dhaka","Gazipur","Narayanganj","Narsingdi","Manikganj","Munshiganj","Tangail","Kishoreganj","Faridpur","Gopalganj","Madaripur","Rajbari","Shariatpur"]},
+Chattogram:{bn:"চট্টগ্রাম",d:["Chattogram","Cox's Bazar","Cumilla","Feni","Brahmanbaria","Chandpur","Lakshmipur","Noakhali","Rangamati","Khagrachhari","Bandarban"]},
+Rajshahi:{bn:"রাজশাহী",d:["Rajshahi","Bogura","Joypurhat","Naogaon","Natore","Chapainawabganj","Pabna","Sirajganj"]},
+Khulna:{bn:"খুলনা",d:["Khulna","Bagerhat","Chuadanga","Jashore","Jhenaidah","Kushtia","Magura","Meherpur","Narail","Satkhira"]},
+Barishal:{bn:"বরিশাল",d:["Barishal","Barguna","Bhola","Jhalokati","Patuakhali","Pirojpur"]},
+Sylhet:{bn:"সিলেট",d:["Sylhet","Habiganj","Moulvibazar","Sunamganj"]},
+Rangpur:{bn:"রংপুর",d:["Rangpur","Dinajpur","Gaibandha","Kurigram","Lalmonirhat","Nilphamari","Panchagarh","Thakurgaon"]},
+Mymensingh:{bn:"ময়মনসিংহ",d:["Mymensingh","Jamalpur","Netrokona","Sherpur"]}};
+const UPAZILA={Dhaka:["Savar","Dhamrai","Keraniganj","Dohar","Nawabganj"]}; // TODO: add more from official lists
+
+/* ===== D. APP LOGIC ===== */
+const $=id=>document.getElementById(id);
+let lang="bn",activeTab="p-farm";
+try{lang=localStorage.getItem("lang")||"bn"}catch(e){}
+const tx=()=>T[lang];
+const opt=(v,l)=>`<option value="${v}">${l}</option>`;
+
+function applyText(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=tx()[e.dataset.i]);
+  document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=tx()[e.dataset.ph]);
+  $("langBtn").textContent=lang==="bn"?"English":"বাংলা";
+  $("safeList").innerHTML=tx().safe.map(s=>`<li>${s}</li>`).join("");
+  $("backend").innerHTML=tx().bk.map(b=>`<div class="card"><h3>${b[0]}</h3><p>${tx().needs} ${b[1]}</p><span class="badge">${lang==="bn"?"চালু নয়":"Not live"}</span></div>`).join("");
+  document.title=tx().brand;
+}
+function buildEmergency(){
+  $("emGrid").innerHTML=SERVICES.slice(0,3).map(s=>card(s,true)).join("");
+}
+function card(s,big){
+  const t=tx(),d=s[lang];
+  return `<article class="card"><div class="num">${s.tel}</div><h3>${d[0]}</h3><p>${d[1]}</p>
+  <div class="row"><a class="btn btn-red" href="tel:${s.tel}">📞 ${t.call} ${s.tel}</a>
+  <a class="small" href="${s.url}" target="_blank" rel="noopener">${t.src}</a></div></article>`;
+}
+function buildCats(){
+  const c=tx().cat;
+  $("cats").innerHTML=Object.keys(c).map(k=>`<button class="cat ${$("fCat").value===k?"on":""}" data-k="${k}"><span class="ic" aria-hidden="true">${CAT_ICONS[k]}</span>${c[k]}</button>`).join("");
+  document.querySelectorAll(".cat").forEach(b=>b.onclick=()=>{$("fCat").value=b.dataset.k;renderResults();buildCats();$("services").scrollIntoView()});
+}
+function buildFilters(){
+  const t=tx(),v={div:$("fDiv").value,dis:$("fDis").value,up:$("fUp").value,cat:$("fCat").value};
+  $("fDiv").innerHTML=opt("",t.allDiv)+Object.keys(DIV).map(k=>opt(k,lang==="bn"?DIV[k].bn:k)).join("");
+  $("fDiv").value=v.div||"";
+  fillDistricts(v.dis);fillUpazilas(v.up);
+  $("fCat").innerHTML=opt("",t.allCat)+Object.keys(t.cat).map(k=>opt(k,t.cat[k])).join("");
+  $("fCat").value=v.cat||"";
+}
+function fillDistricts(sel){
+  const d=$("fDiv").value;
+  $("fDis").innerHTML=opt("",tx().allDis)+(d?DIV[d].d.map(x=>opt(x,x)).join(""):"");
+  $("fDis").value=sel||"";
+}
+function fillUpazilas(sel){
+  const d=$("fDiv").value,list=(d&&$("fDis").value==="Dhaka"&&UPAZILA.Dhaka)||[];
+  $("fUp").innerHTML=opt("",tx().allUp)+list.map(x=>opt(x,x)).join("");
+  $("fUp").value=sel||"";
+}
+function renderResults(){
+  const q=$("q").value.trim().toLowerCase(),cat=$("fCat").value;
+  const list=SERVICES.filter(s=>(!cat||s.cat===cat)&&(!q||(s.bn.join(" ")+s.en.join(" ")+s.tel+tx().cat[s.cat]).toLowerCase().includes(q)));
+  $("results").innerHTML=list.length?list.map(s=>card(s)).join(""):`<div class="empty">${tx().noRes}</div>`;
+  $("locNote").textContent=($("fDiv").value||$("fDis").value||$("fUp").value)?tx().locNone:tx().locAll;
+}
+function buildPanels(){
+  const t=tx(),S=`<span class="badge">${t.sample}</span>`;
+  const tabs=[["p-farm",t.tFarm],["p-adv",t.tAdv],["p-mkt",t.tMkt],["p-biz",t.tBiz],["p-sell",t.tSell]];
+  $("tabs").innerHTML=tabs.map(x=>`<button class="tab ${x[0]===activeTab?"on":""}" role="tab" data-p="${x[0]}">${x[1]}</button>`).join("");
+  $("p-farm").innerHTML=`<div class="card"><p>${t.farmP}</p></div>`;
+  $("p-adv").innerHTML=`<div class="card"><h3>${t.advH} ${S}</h3><ul>${t.advL.map(i=>`<li>${i}</li>`).join("")}</ul></div>`;
+  $("p-mkt").innerHTML=`<div class="note">${t.mktNote}</div><div class="scroll"><table><tr>${t.mktH.map(h=>`<th>${h}</th>`).join("")}</tr>${t.mktR.map(r=>`<tr><td>${r}</td><td>${t.mktV}</td><td>${t.mktD}</td></tr>`).join("")}</table></div>`;
+  $("p-biz").innerHTML=`<p>${t.bizP}</p><div class="grid">${t.bizCards.map(c=>`<div class="card"><h3>${c}</h3><p>${t.bizT}</p>${S}</div>`).join("")}</div>`;
+  $("p-sell").innerHTML=`<div class="card"><p>${t.sellP}</p><span class="badge">${lang==="bn"?"চালু নয়":"Not live"}</span></div>`;
+  document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{activeTab=b.dataset.p;showTab()});
+  showTab();
+}
+function showTab(){
+  document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("on",p.id===activeTab));
+  document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on",b.dataset.p===activeTab));
+}
+function renderAll(){applyText();buildFilters();buildEmergency();buildCats();renderResults();buildPanels()}
+
+/* ===== E. EVENTS ===== */
+$("langBtn").onclick=()=>{lang=lang==="bn"?"en":"bn";try{localStorage.setItem("lang",lang)}catch(e){}renderAll()};
+$("heroSearch").onsubmit=e=>{e.preventDefault();renderResults();$("services").scrollIntoView()};
+$("q").oninput=renderResults;
+$("fDiv").onchange=()=>{fillDistricts();fillUpazilas();renderResults()};
+$("fDis").onchange=()=>{fillUpazilas();renderResults()};
+$("fUp").onchange=renderResults;
+$("fCat").onchange=()=>{renderResults();buildCats()};
+$("sendBtn").onclick=()=>{
+  const body=encodeURIComponent($("msg").value);
+  location.href="mailto:your-email@example.com?subject="+encodeURIComponent("Website feedback")+"&body="+body; // replace the email address
+};
+renderAll();
+</script>
+</body>
+</html>
